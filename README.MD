@@ -24,9 +24,9 @@ cd packages/mobile
 npm install -g wml
 wml add ../common ./node_modules/@monorepo/common
 open . -a iterm && wml start
-open . -a iterm && cd ../common && yarn watch
-open . -a iterm && cd ../mobile/ios && pod install && cd ../ && npx react-native run-ios -- --reset-cache
-open . -a iterm && cd ../web && yarn start
+open . -a iterm && cd packages/common && yarn watch
+open . -a iterm && cd packages/mobile/ios && pod install && cd ../ && npx react-native run-ios -- --reset-cache
+open . -a iterm && cd packages/web && yarn start
 cd ../../ && code .
 ```
 
@@ -39,11 +39,11 @@ Notes:
 ```sh
 yarn install && cd packages/common && npm install grunt --save-dev && npm install grunt-contrib-watch --save-dev && npm install grunt-sync --save && grunt --watch
 # Duplicate tab
-cd ../common && yarn watch
+cd packages/common && yarn watch
 # Duplicate tab
-cd ../mobile && npx react-native run-android -- --reset-cache
+cd packages/mobile && npx react-native run-android -- --reset-cache
 # Duplicate tab
-cd ../web && yarn start
+cd packages/web && yarn start
 # Duplicate tab
 code .
 ```
